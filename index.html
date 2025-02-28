@@ -5,7 +5,7 @@
  *  This source code is licensed under the license found in the
  *  LICENSE file in the root directory of this source tree.
 -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>GraphiQL</title>
@@ -64,10 +64,10 @@
     ></script>
     <script>
       const fetcher = GraphiQL.createFetcher({
-        url: 'https://dev.indexer.inverter.network/v1/graphql',
-      })
+        url: "https://indexer.inverter.network/v1/graphql",
+      });
 
-      const explorerPlugin = GraphiQLPluginExplorer.explorerPlugin()
+      const explorerPlugin = GraphiQLPluginExplorer.explorerPlugin();
 
       const defaultQuery = /* GraphiQL */ `query MyQuery {
   Token(limit: 5) {
@@ -78,7 +78,7 @@
     address
     chainId
   }
-}`
+}`;
 
       function GraphiQLWithExplorer() {
         return React.createElement(GraphiQL, {
@@ -86,13 +86,13 @@
           defaultEditorToolsVisibility: true,
           plugins: [explorerPlugin],
           defaultQuery,
-        })
+        });
       }
 
       ReactDOM.render(
         React.createElement(GraphiQLWithExplorer),
-        document.getElementById('graphiql')
-      )
+        document.getElementById("graphiql")
+      );
     </script>
   </body>
 </html>
