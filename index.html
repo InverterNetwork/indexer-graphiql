@@ -20,6 +20,21 @@
       #graphiql {
         height: 100vh;
       }
+
+      /* Fix for GraphiQL explorer scrolling */
+      .graphiql-container .doc-explorer-contents {
+        overflow: auto !important;
+        max-height: calc(100vh - 200px) !important;
+      }
+
+      .graphiql-explorer-root {
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+      }
+
+      .docExplorerWrap {
+        overflow: auto !important;
+      }
     </style>
 
     <!--
